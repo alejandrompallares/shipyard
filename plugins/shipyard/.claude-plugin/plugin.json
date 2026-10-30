@@ -1,0 +1,10 @@
+{
+  "name": "shipyard",
+  "version": "1.0.0",
+  "description": "shipwright: proyectos bien hechos según los consejos de Boris Cherny (creador de Claude Code). logbook: segundo cerebro en Jylos.",
+  "author": {
+    "name": "Alejandro Morillo",
+    "email": "alejandrompallares@gmail.com"
+  },
+  "keywords": ["proyectos", "jylos", "segundo-cerebro", "claude-md", "git"]
+}
