@@ -5,7 +5,7 @@ description: Segundo cerebro en Jylos. Úsala en cualquier conversación con sus
 
 # Logbook: el segundo cerebro en Jylos
 
-Cada persona tiene una bóveda en Jylos conectada por MCP. Las herramientas se llaman `jylos` y pueden llevar un prefijo, como `mcp__jylos__`. La bóveda es su memoria externa: lo que sabe, lo que le ha interesado, las herramientas y recursos que ha visto, sus ideas, decisiones y proyectos.
+Cada persona tiene una bóveda en Jylos conectada por MCP. Las herramientas se llaman `jylos` y pueden llevar un prefijo según desde dónde se conecte: `mcp__jylos__`, `mcp__remote-devices__jylos__`, `mcp__claude-device__lcl-jylos-`… La bóveda es su memoria externa: lo que sabe, lo que le ha interesado, las herramientas y recursos que ha visto, sus ideas, decisiones y proyectos.
 
 Tu trabajo es doble:
 - mantenerla al día sin que te lo pida;
@@ -16,8 +16,9 @@ Gasta el mínimo contexto posible.
 Vale para cualquier tema con sustancia: aprender algo, comparar opciones, decidir, planear, idear o resolver un problema. La charla y las preguntas de un momento no se guardan.
 
 **Si no hay herramientas `jylos`:**
-- Dilo una sola vez y explica cómo conectarlas (`references/conectar-jylos.md`).
-- Si la persona pide «guardar», dale las notas en bloques Markdown listos para pegar.
+- Puede que acaben de conectarse: dilo una sola vez y pide que envíe otro mensaje.
+- Si siguen sin aparecer (Jylos o la app cerrados, o chat desde el móvil o la web), explica una vez cómo conectarlas (`references/conectar-jylos.md`) y sigue con la tarea.
+- Si la persona pide «guardar», dale las notas en bloques Markdown listos para pegar, con sus líneas para el catálogo.
 
 **Si pide guardar «toda la conversación»** al retomar un chat antiguo, recórrela entera, no solo lo último.
 
@@ -56,7 +57,7 @@ Usa `list_folders`. Si faltan las carpetas de abajo o la nota `Catálogo de recu
 
 **Antes de crear, busca.** Si ya existe nota del tema, léela con `read_note` y amplíala con `update_note` reescribiendo el contenido completo, conservando todo lo anterior. Si no existe, créala con `create_note` y muévela con `move_note`.
 
-**Títulos sin paréntesis, comas ni dos puntos.** Jylos los cambia por `_` en el archivo y los enlaces `[[...]]` se rompen. Si una nota existente ya tiene `_` en el título, enlázala tal cual.
+**Títulos sin paréntesis, comas ni dos puntos.** Jylos los cambia por `_` en el archivo y los enlaces `[[...]]` se rompen. Si una nota existente ya tiene `_` en el título, enlázala tal cual (por ejemplo `[[REA _Reverse Engineer Anything_]]`).
 
 **Herramientas, recursos, temas e ideas** van a `20 Intereses` con este formato:
 
