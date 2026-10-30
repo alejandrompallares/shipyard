@@ -94,3 +94,7 @@ plugins/shipyard/
     └── logbook/                    Skill del segundo cerebro
 logbook-skill-para-app-claude.zip   logbook empaquetada para la app de escritorio
 ```
+
+## Licencia
+
+[MIT](LICENSE) © 2026 Alejandro Morillo

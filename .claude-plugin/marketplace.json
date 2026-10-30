@@ -15,7 +15,15 @@
       "description": "shipwright (proyectos bien hechos: nuevo, entender, mejorar, diseño, variantes, cierre, semana, atajos) y logbook (segundo cerebro en Jylos).",
       "version": "1.0.0",
       "category": "productivity",
-      "keywords": ["proyectos", "jylos", "segundo-cerebro", "claude-md", "git", "playwright"]
+      "keywords": [
+        "proyectos",
+        "jylos",
+        "segundo-cerebro",
+        "claude-md",
+        "git",
+        "playwright"
+      ],
+      "license": "MIT"
     }
   ]
 }
