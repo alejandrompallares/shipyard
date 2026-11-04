@@ -18,3 +18,19 @@ jobs:
       # JSON válidos, versiones iguales, zip = carpeta logbook, rutas citadas existentes
       - name: Comprobar el repo
         run: python3 scripts/check.py
+
+  motor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar el motor
+        run: pip install ./motor pytest onnx
+      # Con el modelo real descargado no se salta ningún test
+      - name: Descargar el modelo
+        run: motor-notas descargar
+      - name: Tests del motor
+        working-directory: motor
+        run: python -m pytest -q
