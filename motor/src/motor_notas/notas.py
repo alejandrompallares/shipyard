@@ -1,6 +1,7 @@
 """Lectura de notas Markdown al estilo Jylos/Obsidian.
 
 - El título es el nombre del archivo sin `.md`.
+- Jylos empieza cada nota con un bloque YAML (`---` … `---`): no es texto de la nota; de él solo se usan las etiquetas.
 - Los campos `clave:: valor` van al principio de la nota (antes del primer texto normal).
 - Los enlaces son `[[Título]]`, `[[Título|alias]]` o `[[Título#sección]]`.
 """
@@ -15,6 +16,9 @@ CARPETAS = ("00 Inbox", "10 Proyectos", "20 Intereses", "30 Conocimiento", "40 S
 
 CAMPO_RE = re.compile(r"^([\w][\w-]*)::[ \t]*(.*)$")
 ENLACE_RE = re.compile(r"\[\[([^\]\|#\n]+)(?:#[^\]\|\n]*)?(?:\|[^\]\n]*)?\]\]")
+# El bloque solo cuenta si su primera línea es «clave:»; así un «---» suelto al principio sigue siendo una línea horizontal.
+YAML_RE = re.compile(r"\A\ufeff?---[ \t]*\r?\n(?=[\w-]+:)(.*?)^---[ \t]*(?:\r?\n|\Z)", re.S | re.M)
+ETIQUETA_RE = re.compile(r"^[ \t]*-[ \t]+(.+?)[ \t]*$", re.M)
 # Prohibidos por la regla de títulos (Jylos los cambia por _) y por el sistema de archivos.
 TITULO_PROHIBIDO = re.compile(r"[(),:/\\\[\]#|^?*\"<>]")
 
@@ -37,7 +41,17 @@ class Nota:
         return f"{self.titulo}\n{campos}\n{self.cuerpo}"
 
 
+def separar_yaml(texto: str) -> tuple[str, list[str]]:
+    """Devuelve el texto sin el bloque YAML inicial y las etiquetas que traía."""
+    m = YAML_RE.match(texto)
+    if not m:
+        return texto, []
+    bloque = re.search(r"^tags:[ \t]*\r?\n((?:[ \t]*-[ \t]+.*(?:\r?\n|\Z))+)", m.group(1), re.M)
+    return texto[m.end():], ETIQUETA_RE.findall(bloque.group(1)) if bloque else []
+
+
 def parsear(texto: str, titulo: str, ruta: str) -> Nota:
+    texto, etiquetas = separar_yaml(texto)
     lineas = texto.splitlines()
     campos: dict[str, str] = {}
     i = 0
@@ -51,6 +65,8 @@ def parsear(texto: str, titulo: str, ruta: str) -> Nota:
             break
         campos[m.group(1).lower()] = m.group(2).strip()
         i += 1
+    if etiquetas:
+        campos["etiquetas"] = " ".join(etiquetas)
     cuerpo = "\n".join(lineas[i:]).strip()
     enlaces = []
     for m in ENLACE_RE.finditer(texto):

@@ -13,7 +13,7 @@ Servidor MCP que busca en una carpeta de notas Markdown compatible con Jylos y O
 | `leer_nota` | Contenido completo, campos `clave:: valor` y enlaces. |
 | `crear_nota` | Crea una nota en una de las carpetas de la bóveda. Rechaza títulos con paréntesis, comas o dos puntos, nunca sobrescribe y avisa si se parece a otra. |
 
-La bóveda sigue las convenciones de la skill logbook: enlaces `[[Título]]`, campos `clave:: valor` al principio (`tipo`, `estado`, `sirve-para`…) y carpetas `00 Inbox`, `10 Proyectos`, `20 Intereses`, `30 Conocimiento`, `40 Sesiones` y `90 Mapas`.
+Lee el bloque YAML con el que Jylos empieza cada nota: lo quita del texto y usa sus etiquetas. La bóveda sigue las convenciones de la skill logbook: enlaces `[[Título]]`, campos `clave:: valor` al principio (`tipo`, `estado`, `sirve-para`…) y carpetas `00 Inbox`, `10 Proyectos`, `20 Intereses`, `30 Conocimiento`, `40 Sesiones` y `90 Mapas`.
 
 ## Instalación
 
