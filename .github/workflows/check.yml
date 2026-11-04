@@ -18,6 +18,8 @@ jobs:
       # JSON válidos, versiones iguales, zip = carpeta logbook, rutas citadas existentes
       - name: Comprobar el repo
         run: python3 scripts/check.py
+      - name: Probar los hooks
+        run: python3 -m unittest discover -s tests/hooks
 
   motor:
     runs-on: ubuntu-latest
