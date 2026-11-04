@@ -24,12 +24,7 @@ Vale para cualquier tema con sustancia: aprender algo, comparar opciones, decidi
 
 ## Primera vez: montar la bóveda
 
-Usa `list_folders`. Si faltan las carpetas de abajo o la nota `Catálogo de recursos`, ofrece montar la estructura una sola vez. Con un «sí»:
-
-1. Crea las carpetas que falten.
-2. Crea en `90 Mapas` las notas de `references/plantillas-mapas.md`: `Inicio`, `Catálogo de recursos` y `Mapa general`.
-3. Pregunta el nombre de la persona para el campo `autor::`, salvo que ya esté en su `~/.claude/CLAUDE.md` (bloque `shipwright:perfil`).
-4. Si ya tenía notas sueltas, no las muevas sin preguntar. Propón ordenarlas por carpetas y añadirlas al catálogo.
+Usa `list_folders`. Si faltan las carpetas de abajo o la nota `Catálogo de recursos`, lee `references/primera-vez.md` y síguelo. Las rutas son relativas a la carpeta de esta skill.
 
 ## Carpetas (no inventes otras)
 
@@ -98,11 +93,4 @@ Cuando guardes algo, dilo en una sola línea al final de la respuesta.
 
 ## Si un día hay bóveda compartida de equipo
 
-Esta skill ya deja cada nota con `autor::`, así que se podrá juntar con las de otros sin perder quién escribió qué. Cuando la persona diga que hay una bóveda compartida:
-
-- **Qué va a cada bóveda:**
-  - a la compartida, lo del equipo: proyectos comunes, conocimiento y herramientas útiles para todos, decisiones de equipo;
-  - a la personal, lo suyo.
-  - Si dudas, pregunta.
-- **Notas de otros:** en la compartida no reescribas notas de otra persona. Añade al final una línea en `## Registro`, o una sección `## Aportación de <nombre> (AAAA-MM-DD)`.
-- **Al buscar,** mira en las dos bóvedas y di de cuál sale cada cosa.
+Cada nota ya lleva `autor::`. Cuando la persona diga que hay una bóveda compartida, lee `references/boveda-compartida.md` y síguelo.
