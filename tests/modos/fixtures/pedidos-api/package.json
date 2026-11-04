@@ -1,0 +1,13 @@
+{
+  "name": "pedidos-api",
+  "version": "0.3.0",
+  "description": "API de pedidos de una tienda pequeña",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
