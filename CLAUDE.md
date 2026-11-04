@@ -15,6 +15,7 @@ Plugin de Claude Code con dos skills: **shipwright** (proyectos de código: nuev
 - `plugins/shipyard/skills/shipwright/`: `SKILL.md`, un `references/modo-*.md` por modo y `scripts/check-site.sh`.
 - `plugins/shipyard/skills/logbook/`: `SKILL.md` y `references/`.
 - `logbook-skill-para-app-claude.zip`: logbook empaquetada para la app de escritorio (generada, no editar a mano).
+- `plugins/shipyard/hooks/`: hooks del plugin (`contexto.py`); sus pruebas, en `tests/hooks/`.
 - `scripts/`: herramientas del repo (`release.sh`, `check.py`).
 - `tests/modos/`: pruebas de comportamiento de shipwright con `claude -p`.
 - `motor/`: prototipo de servidor MCP de búsqueda; NO forma parte del plugin.
