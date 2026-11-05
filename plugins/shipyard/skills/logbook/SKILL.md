@@ -52,6 +52,10 @@ Usa `list_folders`. Si faltan las carpetas de abajo o la nota `Catálogo de recu
 
 **Antes de crear, busca.** Si ya existe nota del tema, léela con `read_note` y amplíala con `update_note` reescribiendo el contenido completo, conservando todo lo anterior. Si no existe, créala con `create_note` y muévela con `move_note`.
 
+**No reescribas una nota larga por una línea.** `update_note` obliga a escribirla entera y es lo más caro. Agrupa los cambios y guarda una sola vez, cuando algo quede cerrado.
+
+**Retomar el trabajo.** La nota `Retomar <carpeta del proyecto>`, en `10 Proyectos`, resume en 15 líneas como máximo el objetivo, lo hecho, las decisiones, lo que falta, el siguiente paso exacto y los archivos clave. Se sustituye entera cada vez. Sirve para seguir en una sesión nueva sin releer nada.
+
 **Títulos sin paréntesis, comas ni dos puntos.** Jylos los cambia por `_` en el archivo y los enlaces `[[...]]` se rompen. Si una nota existente ya tiene `_` en el título, enlázala tal cual (por ejemplo `[[REA _Reverse Engineer Anything_]]`).
 
 **Herramientas, recursos, temas e ideas** van a `20 Intereses` con este formato:

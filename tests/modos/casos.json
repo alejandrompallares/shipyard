@@ -1,0 +1,23 @@
+[
+  {"id": "nuevo", "fixture": null, "cwd": "raiz", "skill": "shipwright",
+   "turnos": [{"prompt": "Quiero empezar un proyecto nuevo: una web sencilla para reservar mesa en un restaurante.", "espera": "references/modo-nuevo.md"}]},
+  {"id": "entender", "fixture": "base", "cwd": "proyecto", "skill": "shipwright",
+   "turnos": [{"prompt": "Explícame este proyecto, no lo conozco.", "espera": "references/modo-entender.md"}]},
+  {"id": "mejorar", "fixture": "env", "cwd": "proyecto", "skill": "shipwright",
+   "turnos": [{"prompt": "Mejora este proyecto.", "espera": "references/modo-mejorar.md"}]},
+  {"id": "diseno", "fixture": "diseno", "cwd": "proyecto", "skill": "shipwright",
+   "turnos": [{"prompt": "Hazme esta pantalla a partir de mock.png: es el listado de pedidos en el móvil.", "espera": "references/modo-diseno.md"}]},
+  {"id": "variantes", "fixture": "base", "cwd": "proyecto", "skill": "shipwright",
+   "turnos": [{"prompt": "Hazme 3 versiones de una página que liste los pedidos.", "espera": "references/modo-variantes.md"}]},
+  {"id": "cierre", "fixture": "sucio", "cwd": "proyecto", "skill": "shipwright",
+   "turnos": [{"prompt": "Cerramos por hoy.", "espera": "references/modo-cierre.md"}]},
+  {"id": "semana", "fixture": "base", "cwd": "raiz", "skill": "shipwright",
+   "turnos": [{"prompt": "¿Qué hice esta semana?", "espera": "references/modo-semana.md"}]},
+  {"id": "atajos", "fixture": "base", "cwd": "proyecto", "skill": "shipwright",
+   "turnos": [{"prompt": "Enséñame los atajos de Claude Code.", "espera": "references/atajos.md"}]},
+  {"id": "cambio", "fixture": "base", "cwd": "proyecto", "skill": "shipwright",
+   "turnos": [{"prompt": "Explícame este proyecto, no lo conozco.", "espera": "references/modo-entender.md"},
+              {"prompt": "Vale, gracias. Cerramos por hoy.", "espera": "references/modo-cierre.md"}]},
+  {"id": "logbook", "fixture": "base", "cwd": "proyecto", "skill": "logbook", "jylos": true,
+   "turnos": [{"prompt": "Hemos decidido guardar los pedidos en SQLite en vez de en memoria, porque tienen que sobrevivir a los reinicios y no queremos montar un servidor de base de datos. Guarda esto.", "espera": null, "info": ["references/conectar-jylos.md"]}]}
+]
