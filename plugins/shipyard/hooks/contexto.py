@@ -2,7 +2,8 @@
 """Mantiene las conversaciones cortas sin perder el hilo. Solo usa la biblioteca estándar.
 
   contexto.py aviso    Hook Stop: si la conversación ha crecido mucho, pide a Claude que guarde
-                       el estado en la nota «Retomar <proyecto>» y avise de que se puede hacer /clear.
+                       el estado en la nota «Retomar <proyecto>» y avise de que se puede hacer /clear
+                       o abrir una conversación nueva (algunos clientes no tienen /clear).
   contexto.py inicio   Hook SessionStart: recuerda leer esa nota al empezar.
 
 SHIPYARD_AVISO_TOKENS cambia el umbral (150000 por defecto); 0 lo desactiva.
@@ -82,8 +83,8 @@ def aviso(datos):
         f"1. Guarda en Jylos la nota «{titulo}» en 10 Proyectos; si ya existe, sustituye su contenido. "
         "Máximo 15 líneas: objetivo, qué está hecho, decisiones, qué falta, siguiente paso exacto y archivos clave. "
         "Si no hay herramientas de Jylos, escribe ese resumen aquí en Markdown.\n"
-        "2. Di en una línea que está guardado y que, al acabar lo que esté en marcha, escriba /clear: "
-        "la sesión nueva sigue sola desde esa nota."
+        "2. Di en una línea que está guardado y que, al acabar lo que esté en marcha, escriba /clear "
+        "o abra una conversación nueva: la sesión nueva sigue sola desde esa nota."
     )}, ensure_ascii=False))
 
 

@@ -51,7 +51,7 @@ La guía [`conectar-jylos.md`](plugins/shipyard/skills/logbook/references/conect
 En Claude Code, lo que más gasta son las conversaciones largas, porque cada turno reenvía la conversación entera. Shipyard las mantiene cortas sin que pierdas el hilo:
 
 1. Cuando una conversación pasa de 150.000 tokens, Claude guarda el estado en la nota `Retomar <proyecto>` de Jylos y te avisa.
-2. Escribes `/clear` cuando te venga bien. Es el único paso manual.
+2. Escribes `/clear` o abres una conversación nueva cuando te venga bien (en los clientes ACP no existe `/clear`). Es el único paso manual.
 3. La sesión nueva lee esa nota y sigue donde estaba.
 
 Para cambiar el límite, usa la variable `SHIPYARD_AVISO_TOKENS`; con `0` se desactiva. Necesita `python3`.
