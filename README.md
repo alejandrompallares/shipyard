@@ -38,6 +38,13 @@ claude mcp list   # jylos debe aparecer como conectado
 /plugin install shipyard@shipyard
 ```
 
+En los clientes ACP no existe `/plugin`. Hazlo desde la terminal:
+
+```bash
+claude plugin marketplace add alejandrompallares/shipyard
+claude plugin install shipyard@shipyard
+```
+
 **4. Empieza a trabajar.** Abre Claude Code en cualquier proyecto y pide, por ejemplo, «mejora este proyecto». La primera vez, `shipwright` te hará seis preguntas para crear tu perfil y `logbook` te ofrecerá preparar la bóveda.
 
 La guía [`conectar-jylos.md`](plugins/shipyard/skills/logbook/references/conectar-jylos.md) cubre la compilación de los plugins de Jylos y la conexión con la app de escritorio de Claude.
@@ -63,6 +70,13 @@ Para cambiar el límite, usa la variable `SHIPYARD_AVISO_TOKENS`; con `0` se des
 ```
 
 También puedes activar la actualización automática desde `/plugin`.
+
+En los clientes ACP no existe `/plugin`. Actualiza desde la terminal y abre una conversación nueva para que se aplique:
+
+```bash
+claude plugin marketplace update shipyard
+claude plugin update shipyard@shipyard
+```
 
 ## Uso
 
