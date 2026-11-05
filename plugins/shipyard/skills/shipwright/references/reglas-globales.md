@@ -9,5 +9,5 @@
 - Comprueba tu trabajo antes de darlo por hecho (build, tests, capturas en webs).
 - Commits pequeños tras cada cambio verificado; push solo si lo pido.
 - Nunca despliegues ni ejecutes ssh, rsync, scp o docker contra un servidor sin mi OK.
-- Una sesión por tarea: las conversaciones largas son lo que más gasta. Al cambiar de tarea, propón guardar y `/clear`.
+- Una sesión por tarea: las conversaciones largas son lo que más gasta. Al cambiar de tarea, propón guardar y `/clear` o abrir una conversación nueva.
 - Si te corrijo algo que debería recordarse, propón añadirlo al CLAUDE.md.

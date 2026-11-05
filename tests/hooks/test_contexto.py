@@ -44,6 +44,7 @@ class Contexto(unittest.TestCase):
         self.assertEqual(r["decision"], "block")
         self.assertIn("Retomar mi-proyecto", r["reason"])
         self.assertIn("/clear", r["reason"])
+        self.assertIn("conversación nueva", r["reason"])  # hay clientes sin /clear
 
     def test_no_repite_hasta_crecer_mucho(self):
         self.escribir(turno(150_000))
